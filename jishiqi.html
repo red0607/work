@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        span{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="timing()">开始计时</button>
+    <button onclick="int=window.clearInterval(int)">暂停计时</button>
+    <div id="demo">
+
+    </div>
+    <script>
+        var i = 0;
+        var div = document.getElementById("demo");
+        var int = self.setInterval(updateNum,1000);
+
+        function timing(){
+            setInterval(updateNum,1000);
+            updateNum();
+        }
+        function updateNum(){
+            var j = i++
+            div.innerHTML = "Time passsed:" +'<span>'+ j +'</span>' +"s"
+        }
+
+    </script>
+    
+
+</body>
+</html>
